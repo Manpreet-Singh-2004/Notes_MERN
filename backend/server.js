@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 
 // Routes Paths
 const home = require('./Routes/home')
+const notes = require('./Routes/notes')
 
 
 const app = express()
@@ -18,6 +19,7 @@ app.use((req, res, next) =>{
 
 // Routes
 app.use('/', home)
+app.use('/notes', notes)
 
 // Connecting to port
 mongoose.connect(process.env.MONGO_URI)
