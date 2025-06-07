@@ -13,7 +13,7 @@ const noteSchema = new Schema({
   },
   tag: {
     type: String,
-    enum: ['normal', 'urgent'], // ✅ only these two values allowed
+    enum: ['normal', 'urgent'], 
     default: 'normal'
   }
 }, { timestamps: true });
